@@ -23,12 +23,12 @@ jobs:
       - name: Install Server Dependencies
         run: |
           cd server
-          npm install
+          npm ci
 
       - name: Prisma Generate
         run: |
           cd server
-          npx prisma generate
+          DATABASE_URL="mysql://root:root@localhost:3306/db" npx prisma generate
 
       - name: Build Server
         run: |
@@ -38,7 +38,7 @@ jobs:
       - name: Install Client Dependencies
         run: |
           cd client
-          npm install
+          npm ci
 
       - name: Build Client
         run: |
