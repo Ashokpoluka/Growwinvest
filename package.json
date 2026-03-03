@@ -1,0 +1,14 @@
+{
+    "name": "growwinv-root",
+    "version": "1.0.0",
+    "description": "Groww-inspired Inventory Management System",
+    "scripts": {
+        "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+        "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+        "prisma:generate": "npm run prisma:generate --prefix server",
+        "prisma:migrate": "npm run prisma:migrate --prefix server"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}

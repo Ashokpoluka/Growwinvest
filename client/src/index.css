@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+:root {
+  --groww-green: #00d09c;
+  --bg-dark: #121212;
+  --card-dark: #1e1e1e;
+}
+
+body {
+  @apply bg-[#121212] text-white font-sans;
+}
+
+.card {
+  @apply bg-[#1e1e1e] rounded-xl p-6 border border-gray-800;
+}
+
+.btn-primary {
+  @apply bg-[#00d09c] text-black font-semibold px-4 py-2 rounded-lg hover:bg-[#00b085] transition-colors;
+}
+
+.input-field {
+  @apply bg-[#2c2c2c] border-none rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#00d09c] outline-none;
+}
